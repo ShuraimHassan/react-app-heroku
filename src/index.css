@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +14,83 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.children\:block > * {
+  display: block;
+}
+
+.block {
+  display: block;
+}
+
+.children\:first\:block > :first-child {
+  display: block;
+}
+
+.children\:last\:block > :last-child {
+  display: block;
+}
+
+.children\:odd\:block > :nth-child(odd) {
+  display: block;
+}
+
+.children\:even\:block > :nth-child(even) {
+  display: block;
+}
+
+.children\:not-first\:block > :not(:first-child) {
+  display: block;
+}
+
+.children\:not-last\:block > :not(:last-child) {
+  display: block;
+}
+
+.children\:hover\:block > :hover {
+  display: block;
+}
+
+.hover\:block:hover {
+  display: block;
+}
+
+.children\:focus\:block > :focus {
+  display: block;
+}
+
+.focus\:block:focus {
+  display: block;
+}
+
+.children\:focus-within\:block > :focus-within {
+  display: block;
+}
+
+.focus-within\:block:focus-within {
+  display: block;
+}
+
+.children\:active\:block > :active {
+  display: block;
+}
+
+.active\:block:active {
+  display: block;
+}
+
+.children\:visited\:block > :visited {
+  display: block;
+}
+
+.visited\:block:visited {
+  display: block;
+}
+
+.children\:disabled\:block > :disabled {
+  display: block;
+}
+
+.disabled\:block:disabled {
+  display: block;
+}
+

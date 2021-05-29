@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>I'm Deploying this app to Heroku</h1>
+        <h1>React app to Heroku</h1>
       </header>
     </div>
   );

@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Heroku</h1>
+        <h2>This App is Push from only with main branch</h2>
       </header>
     </div>
   );

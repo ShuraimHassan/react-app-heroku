@@ -1,3 +1,4 @@
+
 const colors = require('tailwindcss/colors')
 const plugin = require('tailwindcss/plugin')
 
@@ -835,7 +836,7 @@ module.exports = {
     'disabled',
   ],
   variants: {
-    
+
     aspectRatio: ['responsive', 'hover'],
     accessibility: ['responsive', 'focus-within', 'focus'],
     alignContent: ['responsive'],
@@ -936,7 +937,7 @@ module.exports = {
     objectFit: ['responsive'],
     objectPosition: ['responsive'],
     opacity: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus'],
-    display : ['children', 'children-first', 'children-last', 'children-odd', 'children-even', 'children-not-first', 'children-not-last', 'children-hover', 'hover', 'children-focus', 'focus', 'children-focus-within', 'focus-within', 'children-active', 'active', 'children-visited', 'visited', 'children-disabled', 'disabled', 'responsive'],
+    display: ['children', 'children-first', 'children-last', 'children-odd', 'children-even', 'children-not-first', 'children-not-last', 'children-hover', 'hover', 'children-focus', 'focus', 'children-focus-within', 'focus-within', 'children-active', 'active', 'children-visited', 'visited', 'children-disabled', 'disabled', 'responsive'],
     order: ['responsive'],
     outline: ['responsive', 'focus-within', 'focus'],
     overflow: ['responsive'],
@@ -986,6 +987,43 @@ module.exports = {
     zIndex: ['responsive', 'focus-within', 'focus'],
   },
   plugins: [
+    plugin(function({ addUtilities }) {
+      const newUtilities = {
+        '.filter-none': {
+          filter: 'none',
+        },
+        '.filter-grayscale': {
+          filter: 'grayscale(100%)',
+        },
+      }
+
+      addUtilities(newUtilities, ['responsive', 'hover'])
+    }),
+    plugin(function({ addComponents, theme }) {
+      const buttons = {
+        '.btn': {
+          padding: `${theme('spacing.2')} ${theme('spacing.4')}`,
+          borderRadius: theme('borderRadius.md'),
+          fontWeight: theme('fontWeight.600'),
+        },
+        '.btn-indigo': {
+          backgroundColor: theme('colors.indigo.500'),
+          color: theme('colors.white'),
+          '&:hover': {
+            backgroundColor: theme('colors.indigo.600')
+          },
+        },
+      }
+
+      addComponents(buttons)
+    }),
+    plugin(function ({ addBase, theme }) {
+      addBase({
+        'h1': { fontSize: theme('fontSize.2xl') , },
+        'h2': { fontSize: theme('fontSize.xl') },
+        'h3': { fontSize: theme('fontSize.lg') },
+      })
+    }),
     require('postcss-import'),
     require('tailwindcss'),
     require('autoprefixer'),

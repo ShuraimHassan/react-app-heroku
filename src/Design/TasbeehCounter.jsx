@@ -49,11 +49,11 @@ export default class TasbeehCounter extends Component {
   render() {
     return (
       <div>
-        <div className="mt-5 mb-5 text-5xl font-extrabold ">
+        <div className="mt-5 mb-5 text-5xl font-extrabold grid justify-items-center ">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">
             Tasbeeh Counter App </span>
         </div>
-        <div className='mt-5 mb-5'>
+        <div className='mt-5 mb-5 grid justify-items-center '>
           <h1 className={this.state.ColorChange}>{this.state.num}</h1>
           <button onClick={this.Increament} className="bg-white text-blue-500 hover:bg-blue-500 hover:text-white border border-r-0 border-blue-500 rounded-l-lg px-4 py-2 mx-0 outline-none focus:shadow-outline">+</button>
           <button onClick={this.Decreament} className="bg-white text-blue-500 hover:bg-blue-500 hover:text-white border border-blue-500  px-4 py-2 mx-0 outline-none focus:shadow-outline">-</button>

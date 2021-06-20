@@ -4,14 +4,15 @@ import './App.css';
 // import Footer from './Components/footer'
 // import TasbeehCounter from './Design/TasbeehCounter'
 //  import TodoApp from './Components/TodoApp'
-import SpinBulbOnOFF from './Components/SpinBulbOnOFF'
+// import SpinBulbOnOFF from './Components/SpinBulbOnOFF'
+ import Form from './Components/Form'
 
 function App() {
 
   return (
     <>
-      {/* <TasbeehCounter /> */}
-      <SpinBulbOnOFF />
+    
+     <Form/>
     </>
   );
 }
